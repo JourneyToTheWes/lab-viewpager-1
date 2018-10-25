@@ -9,13 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 
-import edu.uw.fragmentdemo.R
 import kotlinx.android.synthetic.main.notification_template_lines_media.view.*
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -54,7 +48,7 @@ class SearchFragment : Fragment() {
         try {
             callback = context as OnSearchListener?
         } catch (e: ClassCastException) {
-            throw ClassCastException(context!!.toString() + " does not implement OnSearchListener")
+            throw ClassCastException(context.toString() + " does not implement OnSearchListener")
         }
     }
 
